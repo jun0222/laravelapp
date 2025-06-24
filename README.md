@@ -14,7 +14,7 @@ cp .env.local .env
 docker compose up -d
 ```
 
-## 環境変数かえて、コンテナ再起動、サーバー再起動
+## 環境変数変更後、コンテナ再起動、サーバー再起動
 
 ```bash
 cp .env.local .env && docker compose up -d && php artisan serve
