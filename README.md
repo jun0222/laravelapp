@@ -17,5 +17,11 @@ docker compose up -d
 ## 環境変数変更後、コンテナ再起動、サーバー再起動
 
 ```bash
-cp .env.local .env && docker compose up -d && php artisan serve
+sh setup-local.sh && docker compose up -d && php artisan serve
+```
+
+## ローカル環境を起動するための`.env`の初期設定
+
+```bash
+sh setup-local.sh
 ```
