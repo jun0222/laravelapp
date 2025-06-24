@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # コピー処理
 cp .env.local .env
