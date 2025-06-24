@@ -19,3 +19,9 @@ docker compose up -d
 ```bash
 cp .env.local .env && docker compose up -d && php artisan serve
 ```
+
+## controllerの作成
+
+```bash
+php artisan make:controller HelloController
+```
