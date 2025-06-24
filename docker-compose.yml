@@ -4,6 +4,7 @@ services:
   db:
     image: postgres:16
     container_name: laravel_postgres
+    restart: unless-stopped # 勝手に落ちた場合にコンテナを再起動する
     ports:
       - "5432:5432"
     environment:
