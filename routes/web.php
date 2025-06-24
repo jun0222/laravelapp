@@ -8,5 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/hello/{msg}', function ($msg) { // パラメータを受け取るルート
-    return "<html><body><h1>About Us</h1><p>parameter is 「{$msg}」</p></body></html>"; // パラメータを含むHTMLを返す
+    return "<html><body><h1>About Us</h1><p>parameter is 「" . e($msg) . "」</p></body></html>"; // パラメータを含むHTMLを返す
 });
