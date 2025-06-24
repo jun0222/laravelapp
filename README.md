@@ -19,3 +19,9 @@ docker compose up -d
 ```bash
 cp .env.local .env && docker compose up -d && php artisan serve
 ```
+
+## ローカル環境を起動するための`.env`の初期設定
+
+```bash
+sh setup-local.sh
+```
