@@ -12,4 +12,4 @@ Route::get('/hello/{msg}', function ($msg) { // パラメータを受け取る�
     return "<html><body><h1>About Us</h1><p>parameter is 「" . e($msg) . "」</p></body></html>"; // パラメータを含むHTMLを返す
 });
 
-Route::get('/hello', [HelloController::class, 'index']); // HelloControllerのindexメソッドを呼び出す
+Route::get('/hello/{id?}/{pass?}', [HelloController::class, 'index']); // HelloControllerのindexメソッドを呼び出す
