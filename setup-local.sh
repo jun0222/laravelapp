@@ -1,16 +1,14 @@
 #!/bin/bash
 set -e
 
-# コピー処理
 cp .env.local .env
-echo ".env ファイルを .env.local から作成しました。"
+echo "===.env.local ファイルを .env にコピーしました。==="
 
-# APP_KEY 生成
 php artisan key:generate
-echo "APP_KEY を自動生成しました。"
+echo "===APP_KEY を生成しました。==="
 
-# キャッシュクリア（念のため）
-php artisan config:clear
-echo "Laravel の設定キャッシュをクリアしました。"
+php artisan config:cache
+echo "===APP_KEYをキャッシュに保存しました。==="
 
-echo "✅ ローカルセットアップ完了！"
+php artisan tinker --execute="dump(['config(app.key)' => config('app.key')]);"
+echo "===↑現在のAPP_KEY。値が表示されない場合は再実行してください。==="

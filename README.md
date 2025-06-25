@@ -25,3 +25,9 @@ sh setup-local.sh && docker compose up -d && php artisan serve
 ```bash
 sh setup-local.sh
 ```
+
+## キャッシュ削除
+
+```bash
+composer dump-autoload && php artisan clear-compiled && php artisan optimize && php artisan config:cache
+```
