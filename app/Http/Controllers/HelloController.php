@@ -3,9 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
+    public function index(Request $request, Response $response) {
+
+        $html = <<<EOF
+            <html>
+                <body>
+                    <h1>Hello</h1>
+                    <h2>Request</h2>
+                    <p>{$request}</p>
+                    <h2>Response</h2>
+                    <p>{$response}</p>
+                </body>
+            </html>
+        EOF;
+
+        return $html;
+
+    }
     // public function index($id='noname', $pass='unknown')
     // {
     //     return <<<EOF
@@ -44,14 +62,14 @@ class HelloController extends Controller
     //     return $html;
     // }
 
-    public function __invoke() {
-        return <<<EOF
-            <html>
-                <body>
-                    <h1>Hello</h1>
-                    <p>これはシングルアクションコントローラのアクションです。</p>
-                </body>
-            </html>
-        EOF;
-    }
+    // public function __invoke() {
+    //     return <<<EOF
+    //         <html>
+    //             <body>
+    //                 <h1>Hello</h1>
+    //                 <p>これはシングルアクションコントローラのアクションです。</p>
+    //             </body>
+    //         </html>
+    //     EOF;
+    // }
 }
