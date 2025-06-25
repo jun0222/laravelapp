@@ -7,24 +7,31 @@ use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-    // RequestとResponseを受け取って、その内容をHTMLとして表示するメソッド
-    public function index(Request $request, Response $response) {
-        // $html = <<<EOF
-        //     <html>
-        //         <body>
-        //             <h1>Hello</h1>
-        //             <h2>Request</h2>
-        //             <p>{$request}</p>  <!-- Requestインスタンスの内容をそのまま表示（オブジェクト型なので意味は薄い） -->
-        //             <h2>Response</h2>
-        //             <p>{$response}</p> <!-- Responseインスタンスも同様に表示 -->
-        //         </body>
-        //     </html>
-        // EOF;
 
-        $html = '<div>dummy</div>';
-
-        return $html;
+    // controllerのindexメソッド
+    public function index() {
+        $data = ['msg' => 'これはコントローラーから渡されたメッセージです。'];
+        return view('hello.index', $data); // hello/index.blade.php ビューを
     }
+
+    // // RequestとResponseを受け取って、その内容をHTMLとして表示するメソッド
+    // public function index(Request $request, Response $response) {
+    //     // $html = <<<EOF
+    //     //     <html>
+    //     //         <body>
+    //     //             <h1>Hello</h1>
+    //     //             <h2>Request</h2>
+    //     //             <p>{$request}</p>  <!-- Requestインスタンスの内容をそのまま表示（オブジェクト型なので意味は薄い） -->
+    //     //             <h2>Response</h2>
+    //     //             <p>{$response}</p> <!-- Responseインスタンスも同様に表示 -->
+    //     //         </body>
+    //     //     </html>
+    //     // EOF;
+
+    //     $html = '<div>dummy</div>';
+
+    //     return $html;
+    // }
 
     /*
     // パラメータ（idとpass）をURLから受け取り、HTMLに埋め込んで返す。
