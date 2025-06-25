@@ -11,7 +11,9 @@ Route::get('/', function () {
 });
 
 // `/hello` にアクセスしたとき、HelloController の index メソッドを呼び出す
-Route::get('hello', [HelloController::class, 'index']); // ベーシックなルート定義
+Route::get('hello', function(){
+    return view('hello.index'); // hello/index ビューを返す
+}); // ベーシックなルート定義
 
 // 以下は検証用に残してあるルート定義のバリエーション（コメントアウト中）
 
