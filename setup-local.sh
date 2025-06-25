@@ -2,7 +2,7 @@
 MAX_ATTEMPTS=10
 attempts=0
 
-echo "実行権限が必要です。推奨: 644"
+echo "実行権限が必要です。推奨: 755"
 
 # APP_KEYが正常に設定されるまで試行を繰り返す
 while [ $attempts -lt $MAX_ATTEMPTS ]; do
