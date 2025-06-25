@@ -20,4 +20,27 @@ class HelloController extends Controller
             </html>
         EOF;
     }
+
+    public function other() {
+        global $head, $style, $body, $end;
+
+        $html = <<<EOF
+            <html>
+                <head>
+                    <title>Other Page</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; }
+                        h1 { color: #333; }
+                        p { font-size: 16px; }
+                    </style>
+                </head>
+                <body>
+                    <h1>Other Page</h1>
+                    <p>This is another page in the application.</p>
+                </body>
+            </html>
+        EOF;
+
+        return $html;
+    }
 }
