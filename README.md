@@ -31,3 +31,9 @@ sh setup-local.sh
 ```bash
 composer dump-autoload && php artisan clear-compiled && php artisan optimize && php artisan config:cache
 ```
+
+## ルートのキャッシュ削除
+
+```bash
+php artisan route:clear
+```
