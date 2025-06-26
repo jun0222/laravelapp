@@ -1,0 +1,1 @@
+<li>post用のcontrollerメソッドにてeachで回したデータ: {{ $data }}</li>

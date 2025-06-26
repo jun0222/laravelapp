@@ -24,7 +24,10 @@
         @foreach ($forData as $data)
             <li>post用のcontrollerメソッドにてforで回したデータ: {{$data}}</li>
         @endforeach
+
+        @each('eachItem', $forData, 'data', 'emptyView')
     @endempty
+
 
     @include('message')
 
