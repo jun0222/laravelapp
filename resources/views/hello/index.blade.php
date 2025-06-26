@@ -14,9 +14,10 @@
     <p>{{date('Y-m-d H:i:s')}}</p>
     <h2>フォーム</h2>
     <form method="POST" action="/hello">
-        @csrf
+        @csrf <!-- CSRFトークンを埋め込む。vueに似たディレクティブのシンタックス -->
         <input type="text" name="msg" placeholder="名前を入力してください">
         <input type="submit" value="送信">
     </form>
+    <p>{!! "<span>エスケープ</span><b>しない</b><span>HTML</span>" !!}</p>
 </body>
 </html>
