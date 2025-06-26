@@ -9,11 +9,26 @@
     <h1>Index</h1>
     <p>HelloのIndexビューテンプレート</p>
     <h2>controllerからのメッセージ</h2>
-    @if ($msg != '')
-    <p>こんにちは、{{$msg}}さん。</p>
+    @isset($msg)
+        <p>コントローラーからのメッセージ: {{$msg}}</p>
     @else
-    <p>名前を入れてください</p>
+        <p>コントローラーからのメッセージはありません。</p>
+    @endisset
+
+    @if ($msg != '')
+        <p>こんにちは、{{$msg}}さん。</p>
+    @else
+        <p>名前を入れてください</p>
     @endif
+
+    @empty($forData)
+        <p>forDataは空です。</p>
+    @else
+        @foreach ($forData as $data)
+            <li>post用のcontrollerメソッドにてforで回したデータ: {{$data}}</li>
+        @endforeach
+    @endempty
+
     <h2>日付</h2>
     <p>{{date('Y-m-d H:i:s')}}</p>
     <h2>フォーム</h2>

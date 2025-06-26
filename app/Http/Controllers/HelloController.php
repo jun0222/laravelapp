@@ -17,7 +17,11 @@ class HelloController extends Controller {
     public function post(Request $request) {
         $msg = $request->msg;
         // echo "msg: {$msg}"; // 受け取ったメッセージを表示（デバッグ用）
-        $data = ['msg' => $request->msg]; // リクエストからmsgを取得
+
+        $forData = ['a', 'b', 'c']; // 例として配列を用意
+
+        $data = ['msg' => $request->msg, 'forData' => $forData]; // リクエストからmsgを取得
+
         return view('hello.index', $data);
     }
 
