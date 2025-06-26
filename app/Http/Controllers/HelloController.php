@@ -14,6 +14,14 @@ class HelloController extends Controller
         return view('hello.index', $data); // hello/index.blade.php ビューを
     }
 
+    // フォーム送信用postメソッド
+    public function post(Request $request) {
+        $msg = $request->msg;
+        // echo "msg: {$msg}"; // 受け取ったメッセージを表示（デバッグ用）
+        $data = ['msg' => 'こんにちは、'.$msg.'さん！'];
+        return view('hello.index', $data);
+    }
+
     // // RequestとResponseを受け取って、その内容をHTMLとして表示するメソッド
     // public function index(Request $request, Response $response) {
     //     // $html = <<<EOF
