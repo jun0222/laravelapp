@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello/Index</title>
-</head>
-<body>
+@extends('layouts.helloapp')
+
+@section('title', 'Hello/Index')
+
+@section('content')
     <h1>Index</h1>
     <p>HelloのIndexビューテンプレート</p>
     <h2>controllerからのメッセージ</h2>
@@ -38,5 +35,4 @@
         <input type="submit" value="送信">
     </form>
     <p>{!! "<span>エスケープ</span><b>しない</b><span>HTML</span>" !!}</p>
-</body>
-</html>
+@endsection
