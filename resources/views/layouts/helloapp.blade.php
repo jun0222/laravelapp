@@ -11,35 +11,44 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px;
         }
         header {
             background-color: #333;
             color: white;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 50px;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
         }
         nav {
-            margin: 10px 0;
+            margin: 5px 0;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline;
@@ -51,10 +60,11 @@
         }
         .content {
             background-color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-top: 20px;
+            margin: 10px 0;
+            flex: 1;
         }
     </style>
 </head>
@@ -80,7 +90,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; {{ date('Y') }} Laravel アプリケーション. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} Laravel アプリケーション</p>
         </div>
     </footer>
 </body>
