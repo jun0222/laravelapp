@@ -9,7 +9,11 @@
     <h1>Index</h1>
     <p>HelloのIndexビューテンプレート</p>
     <h2>controllerからのメッセージ</h2>
-    <p>{{$msg}}</p>
+    @if ($msg != '')
+    <p>こんにちは、{{$msg}}さん。</p>
+    @else
+    <p>名前を入れてください</p>
+    @endif
     <h2>日付</h2>
     <p>{{date('Y-m-d H:i:s')}}</p>
     <h2>フォーム</h2>
