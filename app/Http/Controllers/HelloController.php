@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class HelloController extends Controller
-{
-
+class HelloController extends Controller {
     // controllerのindexメソッド
+
     public function index() {
         $data = ['msg' => 'これはコントローラーから渡されたメッセージです。'];
         return view('hello.index', $data); // hello/index.blade.php ビューを
@@ -18,7 +17,7 @@ class HelloController extends Controller
     public function post(Request $request) {
         $msg = $request->msg;
         // echo "msg: {$msg}"; // 受け取ったメッセージを表示（デバッグ用）
-        $data = ['msg' => 'こんにちは、'.$msg.'さん！'];
+        $data = ['msg' => 'こんにちは、' . $msg . 'さん！'];
         return view('hello.index', $data);
     }
 
