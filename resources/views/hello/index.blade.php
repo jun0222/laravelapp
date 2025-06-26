@@ -26,6 +26,8 @@
         @endforeach
     @endempty
 
+    @include('message')
+
     <h2>日付</h2>
     <p>{{date('Y-m-d H:i:s')}}</p>
     <h2>フォーム</h2>
