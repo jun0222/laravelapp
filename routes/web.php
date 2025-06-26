@@ -13,6 +13,9 @@ Route::get('/', function () {
 // `/hello` にアクセスしたとき、HelloController の index メソッドを呼び出す
 Route::get('hello', [HelloController::class, 'index']); // ベーシックなルート定義
 
+// post メソッドを呼び出すルート。
+Route::post('hello', [HelloController::class, 'post']); // フォーム送信用のルート
+
 // 以下は検証用に残してあるルート定義のバリエーション（コメントアウト中）
 
 // パラメータを1つ受け取るルート。`/hello/abc` のようなURLでアクセスすると、
