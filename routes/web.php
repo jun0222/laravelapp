@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController; // HelloControllerをインポート
+use App\Livewire\LivewireExample; // Livewireコンポーネントをインポート（必要な場合）
 
 // ルートパス `/` にアクセスしたとき、直接HTMLを返す。
 // ※ 本来は view('welcome') を返すが、HTMLを手書きで試したい場合はこちらが便利。
@@ -40,3 +41,5 @@ Route::post('hello', [HelloController::class, 'post']); // フォーム送信用
 // other メソッドを呼び出すルート。HelloController の別アクションを確認したい場合に使用。
 //
 // Route::get('/hello/other', [HelloController::class, 'other']);
+
+Route::get('/livewire-example', LivewireExample::class); // Livewireコンポーネントを呼び出すルート
