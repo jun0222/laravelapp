@@ -1,3 +1,6 @@
-<div>
-    Livewire Example Component
-</div>
+@extends('layouts.app')
+
+@section('content')
+    <p>Livewire Example Component</p>
+    <livewire:good-afternoon-component />
+@endsection
