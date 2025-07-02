@@ -79,3 +79,11 @@ Conventional Commits 規約に従ってコミットメッセージを記述
 > 不要になったブランチはマージ後すみやかに削除しましょう。
 
 [参考](https://engineering.mercari.com/blog/entry/20211213-8f5f5a5aee/)
+
+
+## livewire コマンド
+
+```bash
+# GoodAfternoonComponentを作成
+php artisan make:livewire GoodAfternoonComponent
+```
