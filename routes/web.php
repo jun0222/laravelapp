@@ -42,4 +42,6 @@ Route::post('hello', [HelloController::class, 'post']); // フォーム送信用
 //
 // Route::get('/hello/other', [HelloController::class, 'other']);
 
-Route::get('/livewire-example', LivewireExample::class); // Livewireコンポーネントを呼び出すルート
+// Route::get('/livewire-example', LivewireExample::class); // Livewireコンポーネントを呼び出すルート
+
+Route::get('/react', fn() => view('react'));
