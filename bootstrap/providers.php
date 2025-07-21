@@ -1,2 +1,5 @@
 <?php
-return [App\Providers\AppServiceProvider::class, App\Providers\HelloServiceProvider::class];
+return [
+    App\Providers\AppServiceProvider::class,
+    App\Providers\HelloServiceProvider::class,
+];
