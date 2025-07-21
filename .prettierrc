@@ -6,5 +6,5 @@
   "singleQuote": true,
   "trailingComma": "none",
   "braceStyle": "1tbs",
-  "printWidth": 100
+  "printWidth": 60
 }

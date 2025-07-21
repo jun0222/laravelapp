@@ -42,4 +42,8 @@
         <input type="submit" value="送信">
     </form>
     <p>{!! "<span>エスケープ</span><b>しない</b><span>HTML</span>" !!}</p>
+
+    <p>view composerのテスト</p>
+    <p>controllerで設定した変数: {{$message}}</p>
+    <p>view composerで設定した変数: {{$view_message}}</p>
 @endsection

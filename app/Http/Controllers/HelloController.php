@@ -9,8 +9,15 @@ class HelloController extends Controller {
     // controllerのindexメソッド
 
     public function index() {
-        $data = ['msg' => ''];
-        return view('hello.index', $data); // hello/index.blade.php ビューを
+        // 直接HTMLを返す方法
+        // $data = ['msg' => ''];
+        // return view('hello.index', $data); // hello/index.blade.php ビューを
+
+        // view composerで設定した変数を使う
+        return view('hello.index', [
+            'msg' => '',
+            'message' => 'Hello!',
+        ]);
     }
 
     // フォーム送信用postメソッド
